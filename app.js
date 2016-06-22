@@ -8,6 +8,7 @@ x('http://www.autotrader.com/cars-for-sale/cars+under+20000/Toyota/Tundra/Lawren
   title: '#j_id_1_3ye_6 > h2 > a > span.atcui-truncate.ymm > span',
   price: '.listing-price > .price > h4 > span',
   permalink : '#j_id_1_3ye_6 > h2 > a@href',
+  images: '.media-img > a > img@src'
 
 
 }])
