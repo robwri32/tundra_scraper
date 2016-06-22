@@ -8,8 +8,13 @@ x('http://atlanta.craigslist.org/search/sss?query=toyota+tundra&max_price=20000&
   title: '#titletextonly',
   price: 'span.price',
   permalink : 'span > span.pl > a@href',
-  image : {' > a > div.swipe > div > div:nth-child(1) > img[src]'}
+  image : ' > a > div.swipe > div > div:nth-child(1) > img@src'
+
 
 }])
 
-  .write('results.json');
+  .write('results-craigs.json');
+
+
+
+// #sortable-results > div.rows > p:nth-child(1) > a > div.swipe > div > div:nth-child(1) > img
