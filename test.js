@@ -1,16 +1,9 @@
 var Xray = require('x-ray');
 var x = Xray();
 
-x('http://atlanta.craigslist.org/search/sss?query=toyota+tundra&max_price=20000&min_auto_year=2008', {
-  title: '#titletextonly',
-  price: 'span.price',
-  permalink : 'span > span.pl > a@href',
-  image : 'img@src'
+x('https://www.cars.com/for-sale/searchresults.action?zc=30004&rd=200&prMx=20000&mdId=22213&mkId=20088&stkTypId=28881&sf1Nm=price&sf1Dir=DESC&sf2Nm=miles&sf2Dir=ASC&page=1&perPage=250', {
+  title: 'body > div.page.search-results-page > cars-shop-srp > div > div.gray-background > div > div > div > cars-shop-listings > div > div:nth-child(3) > div > div > div.listing__details.col-dt-6.col-8.col-mb-12 > div.result-meta.at-least-tablet > div.result-colors > span'
+
 })(function(err, obj) {
 console.log(err, obj)
 });
-
-
-
-// #sortable-results > div.rows > p:nth-child(1) > a > div.swipe > div > div:nth-child(1) > img
-// #sortable-results > div.rows > p:nth-child(1) > a > div.swipe > div > div:first-child
